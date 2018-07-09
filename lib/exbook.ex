@@ -12,7 +12,8 @@ defmodule Exbook do
       :world
 
   """
+  @author "Simone Cottini"
   def hello do
-    :world
+    IO.inspect("#{@author} says: hello world!")
   end
 end

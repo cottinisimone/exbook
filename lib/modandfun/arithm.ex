@@ -1,7 +1,8 @@
 defmodule Arithmetic do
 
     @moduledoc """
-    ### Exercise: ModulesAndFunctions-4, 5; Page 93
+    
+    ### Exercise: ModulesAndFunctions-4, 5, 6; Page 93
 
     $ iex lib/modandfun/arithm.ex
 

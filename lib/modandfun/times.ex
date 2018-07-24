@@ -24,5 +24,4 @@ defmodule Times do
   def triple(n), do: double(n) + n
 
   def quadruple(n), do: double(n) + double(n)
-  
 end

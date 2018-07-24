@@ -1,36 +1,34 @@
 defmodule Libs do
-    
-    @moduledoc """
-    
-    ### Exercise: ModulesAndFunctions-7; Page 113
+  @moduledoc """
 
-    Ex => Find library that:
-    - Convert a float to a string with two decimal digits. (Erlang)
-    iex> :erlang.float_to_binary(7.113, [decimals: 2])
+  ### Exercise: ModulesAndFunctions-7; Page 113
 
-    - Get the value of an operating-system environment variable. (Elixir)
-    iex> System.get_env("PATH")
+  Ex => Find library that:
+  - Convert a float to a string with two decimal digits. (Erlang)
+  iex> :erlang.float_to_binary(7.113, [decimals: 2])
 
-    - Return the extension component of a file name (so return .exs if given "dave/test.exs"). (Elixir)
-    iex> Path.extname("lib/modandfun/libs.ex")
+  - Get the value of an operating-system environment variable. (Elixir)
+  iex> System.get_env("PATH")
 
-    - Return the process’s current working directory. (Elixir)
-    iex> System.cwd()
+  - Return the extension component of a file name (so return .exs if given "dave/test.exs"). (Elixir)
+  iex> Path.extname("lib/modandfun/libs.ex")
 
-    - Convert a string containing JSON into Elixir data structures. (Just find; don’t install.)
-    Using Poison https://github.com/devinus/poison
-    ```
-        defmodule Person do
-            @derive [Poison.Encoder]
-            defstruct [:name, :age]
-        end
+  - Return the process’s current working directory. (Elixir)
+  iex> System.cwd()
 
-        Poison.encode!(%Person{name: "Devin Torres", age: 27})
-    ```
+  - Convert a string containing JSON into Elixir data structures. (Just find; don’t install.)
+  Using Poison https://github.com/devinus/poison
+  ```
+      defmodule Person do
+          @derive [Poison.Encoder]
+          defstruct [:name, :age]
+      end
 
-    - Execute a command in your operating system’s shell.
-    iex> System.cmd("ls", ["-la", "./lib/modandfun"])
-        
-    """
+      Poison.encode!(%Person{name: "Devin Torres", age: 27})
+  ```
 
+  - Execute a command in your operating system’s shell.
+  iex> System.cmd("ls", ["-la", "./lib/modandfun"])
+      
+  """
 end

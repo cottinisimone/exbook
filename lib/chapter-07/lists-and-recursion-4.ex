@@ -12,8 +12,8 @@ defmodule Spanv2 do
   def span_reverse(from, to), do: [to | span_reverse(from, to - 1)]
   # Reverse impl for fun
   def reverse(sequence), do: _reverse(sequence, [])
-  def _reverse([], reversed), do: reversed
-  def _reverse([head | tail], reversed), do: _reverse(tail, [head | reversed])
+  defp _reverse([], reversed), do: reversed
+  defp _reverse([head | tail], reversed), do: _reverse(tail, [head | reversed])
 
 end
 

@@ -4,9 +4,9 @@ defmodule Flat do
   
   # I know it's not the best solution. Headache reached before the solution!
   def flatten(list), do: _flatten(list)
-  def _flatten([head]), do: _flatten(head)
-  def _flatten([head | tail]), do: _flatten(head) ++ _flatten(tail)
-  def _flatten(elem), do: [elem]
+  defp _flatten([head]), do: _flatten(head)
+  defp _flatten([head | tail]), do: _flatten(head) ++ _flatten(tail)
+  defp _flatten(elem), do: [elem]
 
 end
 

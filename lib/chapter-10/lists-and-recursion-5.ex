@@ -1,7 +1,6 @@
-# elixir lib/chapter-07/lists-and-recursion-5.ex
+# elixir lib/chapter-10/lists-and-recursion-5.ex
 
 defmodule Enumv2 do
-  
   def all?([], _), do: true
   def all?([head | tail], predicate), do: predicate.(head) && all?(tail, predicate)
   def all?(_, _), do: false
@@ -26,12 +25,11 @@ defmodule Enumv2 do
   def take(_, quantity) when quantity == 0, do: []
   def take([head], _), do: [head]
   def take([head | tail], quantity), do: [head | take(tail, quantity - 1)]
-
 end
 
-IO.inspect Enumv2.all?([1, 2, 3, 4, 5], &(&1 < 6))
+IO.inspect(Enumv2.all?([1, 2, 3, 4, 5], &(&1 < 6)))
 # true
-IO.inspect Enumv2.all?([1, 2, 3, 4, 5], &(rem(&1, 2) == 0))
+IO.inspect(Enumv2.all?([1, 2, 3, 4, 5], &(rem(&1, 2) == 0)))
 # false
 Enumv2.each([1, 2, 3, 4, 5], &IO.puts/1)
 # 1
@@ -39,17 +37,17 @@ Enumv2.each([1, 2, 3, 4, 5], &IO.puts/1)
 # 3
 # 4
 # 5
-IO.inspect Enumv2.filter([1, 2, 3, 4, 5], &(rem(&1, 2) == 0))
+IO.inspect(Enumv2.filter([1, 2, 3, 4, 5], &(rem(&1, 2) == 0)))
 # [2, 4]
-IO.inspect Enumv2.split([1, 2, 3, 4, 5], 0)
+IO.inspect(Enumv2.split([1, 2, 3, 4, 5], 0))
 # {[], [1, 2, 3, 4, 5]}
-IO.inspect Enumv2.split([1, 2, 3, 4, 5], 3)
+IO.inspect(Enumv2.split([1, 2, 3, 4, 5], 3))
 # {[3, 2, 1], [4, 5]}
-IO.inspect Enumv2.split([1, 2, 3, 4, 5], 6)
+IO.inspect(Enumv2.split([1, 2, 3, 4, 5], 6))
 # {[5, 4, 3, 2, 1], []}
-IO.inspect Enumv2.take([1, 2, 3, 4, 5], 0)
+IO.inspect(Enumv2.take([1, 2, 3, 4, 5], 0))
 # []
-IO.inspect Enumv2.take([1, 2, 3, 4, 5], 3)
+IO.inspect(Enumv2.take([1, 2, 3, 4, 5], 3))
 # [1, 2, 3]
-IO.inspect Enumv2.take([1, 2, 3, 4, 5], 6)
+IO.inspect(Enumv2.take([1, 2, 3, 4, 5], 6))
 # [1, 2, 3, 4, 5]

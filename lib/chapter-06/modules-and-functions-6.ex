@@ -1,7 +1,6 @@
 # elixir lib/chapter-06/modules-and-functions-6.ex
 
 defmodule Guess do
-  
   def guess(n, head..tail) when n == div(head + tail, 2), do: "#{n}"
 
   def guess(n, head..tail) when n < div(head + tail, 2) do
@@ -13,10 +12,9 @@ defmodule Guess do
     IO.puts("Is it #{div(head + tail, 2)}?")
     guess(n, div(head + tail, 2)..tail)
   end
-
 end
 
-IO.puts Guess.guess(273, 1..1000)
+IO.puts(Guess.guess(273, 1..1000))
 # Is it 500?
 # Is it 250?
 # Is it 375?

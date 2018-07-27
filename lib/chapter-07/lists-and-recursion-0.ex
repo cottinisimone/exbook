@@ -1,7 +1,6 @@
 # elixir lib/chapter-07/lists-and-recursion-0.ex
 
 defmodule Sumv2 do
-  
   def sum(list), do: _sum(list, 0)
   defp _sum([], total), do: total
   defp _sum([head | tail], total), do: _sum(tail, head + total)
@@ -18,16 +17,15 @@ defmodule Sumv2 do
 
   # Rewrite attempt 4 => Enum.reduce/3
   def sum_4(list), do: Enum.reduce(list, 0, fn a, b -> a + b end)
-
 end
 
-IO.inspect Sumv2.sum([1, 2, 3, 4, 5])
+IO.inspect(Sumv2.sum([1, 2, 3, 4, 5]))
 # 15
-IO.inspect Sumv2.sum_1([1, 2, 3, 4, 5])
+IO.inspect(Sumv2.sum_1([1, 2, 3, 4, 5]))
 # 15
-IO.inspect Sumv2.sum_2([1, 2, 3, 4, 5])
+IO.inspect(Sumv2.sum_2([1, 2, 3, 4, 5]))
 # 15
-IO.inspect Sumv2.sum_3([1, 2, 3, 4, 5])
+IO.inspect(Sumv2.sum_3([1, 2, 3, 4, 5]))
 # 15
-IO.inspect Sumv2.sum_4([1, 2, 3, 4, 5])
+IO.inspect(Sumv2.sum_4([1, 2, 3, 4, 5]))
 # 15

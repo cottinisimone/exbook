@@ -13,9 +13,9 @@ defmodule Times do
   def quadruple(n), do: double(n) + double(n)
 end
 
-IO.inspect Times.double(3)
+IO.inspect(Times.double(3))
 # 6
-IO.inspect Times.triple(3)
+IO.inspect(Times.triple(3))
 # 9
-IO.inspect Times.quadruple(3)
+IO.inspect(Times.quadruple(3))
 # 12

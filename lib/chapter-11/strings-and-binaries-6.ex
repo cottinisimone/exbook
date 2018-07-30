@@ -24,11 +24,13 @@ defmodule CapSen do
   # Approach 1
   defp up(char) when char <= ?z and char >= ?a, do: char - 32
   defp up(char) when char <= ?Z and char >= ?A, do: char
-  defp up(char), do: raise("Invalid character #{char}") # or return original one
+  # or return original one
+  defp up(char), do: raise("Invalid character #{char}")
 
   defp down(char) when char <= ?z and char >= ?a, do: char
   defp down(char) when char <= ?Z and char >= ?A, do: char + 32
-  defp down(char), do: raise("Invalid character #{char}") # or return original one
+  # or return original one
+  defp down(char), do: raise("Invalid character #{char}")
 
   defp _reverse(sequence), do: _reverse(sequence, [])
   defp _reverse([], reversed), do: reversed

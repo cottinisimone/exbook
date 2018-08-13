@@ -7,13 +7,13 @@ defmodule TaxParser do
       File.read!("lib/chapter-11/orders.csv")
       |> String.split("\n")
       |> Enum.drop(1)
-      |> Enum.map(fn w -> w |> String.split(",") |> _rebind() end)
+      |> Enum.map(fn w -> String.split(w, ",") |> _rebind() end)
       |> rates([])
 
   def _rebind([id, ship_to, net_amount]),
     do: [
       id: String.to_integer(id),
-      ship_to: (ship_to |> String.replace(":", "") |> String.to_atom()),
+      ship_to: ship_to |> String.replace(":", "") |> String.to_atom(),
       net_amount: String.to_float(net_amount)
     ]
 
@@ -21,4 +21,4 @@ defmodule TaxParser do
   def rates(tax_rates, _), do: tax_rates
 end
 
-IO.inspect TaxParser.parse
+IO.inspect(TaxParser.parse())
